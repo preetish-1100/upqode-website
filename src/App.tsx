@@ -12,6 +12,7 @@ import Services from './components/Services';
 import FAQ from './components/FAQ';
 import StartProject from './components/StartProject';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,6 +29,7 @@ function App() {
         <FAQ />
         <StartProject />
         <Footer />
+        <ScrollToTop />
       </main>
     </ReactLenis>
   );
