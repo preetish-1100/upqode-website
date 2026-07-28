@@ -70,7 +70,7 @@ export default function Work() {
             </h2>
           </div>
 
-          <div className="flex flex-col gap-8 max-w-sm pb-4 md:mr-32">
+          <div className="relative flex flex-col gap-8 max-w-sm pb-4 md:mr-32">
             <p className="text-lg md:text-xl text-[#555555] leading-relaxed">
               Explore a selection of our recent projects. Each one crafted with strategy, creativity, and precision to deliver real results.
             </p>
@@ -83,7 +83,7 @@ export default function Work() {
           </div>
           
           {/* Spinning Circular Text */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center pointer-events-none">
+          <div className="absolute right-0 top-[58%] -translate-y-1/2 hidden lg:flex items-center justify-center pointer-events-none">
             <div
               ref={badgeRef}
               className="w-32 h-32 relative flex items-center justify-center origin-center"

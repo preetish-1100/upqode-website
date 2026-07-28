@@ -78,8 +78,8 @@ export default function Hero() {
   }, []);
 
   return (
-    <Section className="py-24 md:py-32 flex flex-col justify-center relative overflow-hidden" id="hero">
-      <div ref={containerRef}>
+    <Section id="Hero" className="!py-0 min-h-screen flex items-center relative overflow-hidden">
+      <div ref={containerRef} className="w-full flex flex-col justify-center">
         <div className="grid lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-8 items-center w-full z-10 relative">
           {/* Left Content */}
           <div ref={leftContentRef} className="flex flex-col gap-6">
