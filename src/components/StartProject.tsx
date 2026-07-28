@@ -225,8 +225,8 @@ export default function StartProject() {
                  
                  <div className="mt-auto pt-8 flex items-center gap-3">
                    <div className="flex -space-x-2 shrink-0">
-                     <div className="w-7 h-7 rounded-full bg-gray-200 border-2 border-white overflow-hidden"><img src="/images/work_1.png" className="w-full h-full object-cover" /></div>
-                     <div className="w-7 h-7 rounded-full bg-gray-300 border-2 border-white overflow-hidden"><img src="/images/work_2.png" className="w-full h-full object-cover" /></div>
+                     <div className="w-7 h-7 rounded-full bg-gray-200 border-2 border-white overflow-hidden"><img src="./images/work_1.png" className="w-full h-full object-cover" /></div>
+                     <div className="w-7 h-7 rounded-full bg-gray-300 border-2 border-white overflow-hidden"><img src="./images/work_2.png" className="w-full h-full object-cover" /></div>
                      <div className="w-7 h-7 rounded-full bg-[#C9A574] border-2 border-white text-[8px] text-white font-bold flex items-center justify-center">+5</div>
                    </div>
                    <div className="flex flex-col">

@@ -4,12 +4,12 @@ import { ArrowUpRight } from "lucide-react";
 import Section from "./Section";
 
 const projects = [
-  { title: "Luxe Events", category: "Branding, Web Design", image: "/images/work_1.png" },
-  { title: "Noir Collective", category: "E-commerce, Web Design", image: "/images/work_2.png" },
-  { title: "Apex Studios", category: "Web Design, Development", image: "/images/work_3.png" },
-  { title: "Verde", category: "Branding, E-commerce", image: "/images/work_4.png" },
-  { title: "Solstice", category: "App Design, UX/UI", image: "/images/work_5.png" },
-  { title: "Horizon", category: "Web3, Product Design", image: "/images/work_6.png" },
+  { title: "Luxe Events", category: "Branding, Web Design", image: "./images/work_1.png" },
+  { title: "Noir Collective", category: "E-commerce, Web Design", image: "./images/work_2.png" },
+  { title: "Apex Studios", category: "Web Design, Development", image: "./images/work_3.png" },
+  { title: "Verde", category: "Branding, E-commerce", image: "./images/work_4.png" },
+  { title: "Solstice", category: "App Design, UX/UI", image: "./images/work_5.png" },
+  { title: "Horizon", category: "Web3, Product Design", image: "./images/work_6.png" },
 ];
 
 export default function Work() {

@@ -9,28 +9,28 @@ const steps = [
     title: "Discover",
     desc: "We start by understanding your business, goals, audience, and challenges through in-depth research and conversations.",
     icon: <Compass className="w-5 h-5 text-[#161616]" />,
-    image: "/images/work_1.png"
+    image: "./images/work_1.png"
   },
   {
     num: "02",
     title: "Strategy",
     desc: "We craft a tailored strategy and solution roadmap that aligns with your goals and sets the foundation for success.",
     icon: <Target className="w-5 h-5 text-[#161616]" />,
-    image: "/images/work_2.png"
+    image: "./images/work_2.png"
   },
   {
     num: "03",
     title: "Design & Develop",
     desc: "We bring ideas to life with thoughtful design and clean, modern development focused on performance and usability.",
     icon: <PenTool className="w-5 h-5 text-[#161616]" />,
-    image: "/images/work_3.png"
+    image: "./images/work_3.png"
   },
   {
     num: "04",
     title: "Launch & Grow",
     desc: "We launch with precision and provide ongoing support to optimize, scale, and help your business grow.",
     icon: <Rocket className="w-5 h-5 text-[#161616]" />,
-    image: "/images/work_4.png"
+    image: "./images/work_4.png"
   }
 ];
 

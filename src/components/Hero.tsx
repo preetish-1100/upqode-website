@@ -133,7 +133,7 @@ export default function Hero() {
               ref={desktopMockupRef}
               className="absolute top-0 right-0 w-[85%] h-[75%] rounded-2xl shadow-2xl overflow-hidden bg-[#161616]"
             >
-               <img src="/images/work_1.png" alt="Desktop Mockup" className="w-full h-full object-cover object-top opacity-90" />
+               <img src="./images/work_1.png" alt="Desktop Mockup" className="w-full h-full object-cover object-top opacity-90" />
             </div>
 
             {/* Tablet Mockup */}
@@ -141,7 +141,7 @@ export default function Hero() {
               ref={tabletMockupRef}
               className="absolute bottom-0 right-[5%] w-[65%] h-[45%] rounded-xl shadow-2xl overflow-hidden bg-white z-10"
             >
-               <img src="/images/work_4.png" alt="Tablet Mockup" className="w-full h-full object-cover object-top" />
+               <img src="./images/work_4.png" alt="Tablet Mockup" className="w-full h-full object-cover object-top" />
             </div>
             
             {/* Phone Mockup */}
@@ -149,12 +149,12 @@ export default function Hero() {
               ref={phoneMockupRef}
               className="absolute top-[20%] left-0 w-[22%] h-[60%] rounded-[2rem] shadow-[0_30px_60px_rgba(0,0,0,0.3)] overflow-hidden bg-white border-[6px] border-[#161616] z-20"
             >
-               <img src="/images/work_3.png" alt="Phone Mockup" className="w-full h-full object-cover object-center" />
+               <img src="./images/work_3.png" alt="Phone Mockup" className="w-full h-full object-cover object-center" />
             </div>
 
             {/* Decorative Vase */}
             <div className="absolute -bottom-16 -right-16 w-64 h-64 z-30 pointer-events-none mix-blend-multiply opacity-80 hidden lg:block">
-               <img src="/images/work_4.png" alt="Vase" className="w-full h-full object-cover rounded-full filter blur-[2px]" style={{ maskImage: 'linear-gradient(to top, black, transparent)' }} />
+               <img src="./images/work_4.png" alt="Vase" className="w-full h-full object-cover rounded-full filter blur-[2px]" style={{ maskImage: 'linear-gradient(to top, black, transparent)' }} />
             </div>
           </div>
         </div>

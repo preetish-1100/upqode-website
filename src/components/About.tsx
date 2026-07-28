@@ -120,7 +120,7 @@ export default function About() {
           <div ref={collageRef} className="relative h-[450px] md:h-[550px] w-full">
              {/* Main Image */}
              <div className="absolute top-0 right-0 w-[80%] h-[75%] rounded-2xl overflow-hidden shadow-xl">
-               <img src="/images/about_lifestyle.png" alt="Office meeting" className="w-full h-full object-cover" />
+               <img src="./images/about_lifestyle.png" alt="Office meeting" className="w-full h-full object-cover" />
              </div>
 
              {/* Decorative dots pattern */}
@@ -128,7 +128,7 @@ export default function About() {
 
              {/* Overlapping small image */}
              <div className="absolute bottom-12 right-12 md:right-24 w-[45%] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-[#FAF7F2] z-10">
-               <img src="/images/work_5.png" alt="Desktop monitor" className="w-full h-full object-cover" />
+               <img src="./images/work_5.png" alt="Desktop monitor" className="w-full h-full object-cover" />
              </div>
 
              {/* Handwriting Note */}
