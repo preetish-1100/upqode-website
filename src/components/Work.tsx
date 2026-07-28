@@ -92,7 +92,7 @@ export default function Work() {
                  <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
                  <text className="text-[11px] font-bold tracking-[0.25em] uppercase">
                    <textPath href="#circlePath" startOffset="0%">
-                      DESIGNING EXPERIENCES WITH • 
+                      DESIGNING EXPERIENCES THAT CONNECT •
                    </textPath>
                  </text>
                </svg>
