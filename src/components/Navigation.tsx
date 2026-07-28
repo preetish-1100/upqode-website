@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ArrowUpRight } from "lucide-react";
+import { useLenis } from 'lenis/react';
 
 const navItems = [
   { name: "About", href: "#about" },
@@ -13,6 +14,7 @@ const navItems = [
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
+  const lenis = useLenis();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,14 +36,28 @@ export default function Navigation() {
     return () => ctx.revert();
   }, []);
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
+    e.preventDefault();
+    if (lenis) {
+      lenis.scrollTo(target, { duration: 1.2, easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+    } else {
+      const element = document.querySelector(target);
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header
       ref={headerRef}
       className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 lg:px-24 h-24 transition-all duration-500 ${
-        isScrolled ? "bg-bg-primary/80 backdrop-blur-lg border-b border-border/50 shadow-sm" : "bg-transparent"
+        isScrolled ? "bg-bg-primary/95 backdrop-blur-lg border-b border-border/50 shadow-sm" : "bg-transparent"
       }`}
     >
-      <a href="#top" className="text-2xl font-heading font-semibold tracking-widest text-text-primary uppercase">
+      <a 
+        href="#top" 
+        onClick={(e) => handleSmoothScroll(e, '#top')}
+        className="text-2xl font-heading font-semibold tracking-widest text-text-primary uppercase"
+      >
         UPQODE
       </a>
 
@@ -50,6 +66,7 @@ export default function Navigation() {
           <a
             key={item.name}
             href={item.href}
+            onClick={(e) => handleSmoothScroll(e, item.href)}
             className="text-sm font-medium text-text-primary hover:text-accent transition-colors relative group"
           >
             {item.name}
@@ -60,6 +77,7 @@ export default function Navigation() {
 
       <a
         href="#start"
+        onClick={(e) => handleSmoothScroll(e, '#start')}
         className="hidden md:flex group items-center gap-2 bg-text-primary text-bg-primary px-6 py-3 rounded-full text-sm font-medium transition-all hover:bg-bg-primary hover:text-text-primary hover:shadow-[0_0_20px_rgba(201,165,116,0.2)] border border-transparent hover:border-text-primary"
       >
         Start Your Project

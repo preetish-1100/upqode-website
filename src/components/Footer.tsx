@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useLenis } from 'lenis/react';
 
 export default function Footer() {
   const containerRef = useRef<HTMLDivElement>(null);
   const logoTextRef = useRef<HTMLSpanElement>(null);
+  const lenis = useLenis();
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -23,6 +25,18 @@ export default function Footer() {
     return () => ctx.revert();
   }, []);
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
+    if (target.startsWith('#')) {
+      e.preventDefault();
+      if (lenis) {
+        lenis.scrollTo(target, { duration: 1.2, easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+      } else {
+        const element = document.querySelector(target);
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <footer ref={containerRef} className="relative bg-[#FAF7F2] pt-24 overflow-hidden border-t border-[#E9E3DA]">
       
@@ -37,7 +51,7 @@ export default function Footer() {
         
         {/* Top Header */}
         <div className="flex flex-col md:flex-row justify-between items-center pb-12 border-b border-[#E9E3DA]">
-          <a href="#top" className="text-3xl font-heading font-semibold tracking-widest text-[#161616] uppercase mb-6 md:mb-0">
+          <a href="#top" onClick={(e) => handleSmoothScroll(e, '#top')} className="text-3xl font-heading font-semibold tracking-widest text-[#161616] uppercase mb-6 md:mb-0">
             UPQODE
           </a>
           
@@ -74,14 +88,14 @@ export default function Footer() {
           <div className="flex flex-col gap-6 lg:pl-8">
             <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-[#161616]">Company</h4>
             <div className="flex flex-col gap-4 text-sm">
-              <a href="#about" className="text-[#555555] hover:text-[#161616] transition-colors">About Us</a>
-              <a href="#work" className="text-[#555555] hover:text-[#161616] transition-colors">Our Work</a>
-              <a href="#services" className="text-[#555555] hover:text-[#161616] transition-colors">Services</a>
-              <a href="#process" className="text-[#555555] hover:text-[#161616] transition-colors">Process</a>
-              <a href="#testimonials" className="text-[#555555] hover:text-[#161616] transition-colors">Testimonials</a>
+              <a href="#about" onClick={(e) => handleSmoothScroll(e, '#about')} className="text-[#555555] hover:text-[#161616] transition-colors">About Us</a>
+              <a href="#work" onClick={(e) => handleSmoothScroll(e, '#work')} className="text-[#555555] hover:text-[#161616] transition-colors">Our Work</a>
+              <a href="#services" onClick={(e) => handleSmoothScroll(e, '#services')} className="text-[#555555] hover:text-[#161616] transition-colors">Services</a>
+              <a href="#process" onClick={(e) => handleSmoothScroll(e, '#process')} className="text-[#555555] hover:text-[#161616] transition-colors">Process</a>
+              <a href="#testimonials" onClick={(e) => handleSmoothScroll(e, '#testimonials')} className="text-[#555555] hover:text-[#161616] transition-colors">Testimonials</a>
               <a href="#" className="text-[#555555] hover:text-[#161616] transition-colors">Blog</a>
               <a href="#" className="text-[#555555] hover:text-[#161616] transition-colors">Careers</a>
-              <a href="#start" className="text-[#555555] hover:text-[#161616] transition-colors">Contact</a>
+              <a href="#start" onClick={(e) => handleSmoothScroll(e, '#start')} className="text-[#555555] hover:text-[#161616] transition-colors">Contact</a>
             </div>
           </div>
 
